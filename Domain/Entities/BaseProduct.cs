@@ -8,5 +8,13 @@ namespace CraftShopAPI.Domain.Entities
         public int Height;
         public int ProductId;
 
+        public virtual BaseProduct Clone() 
+        {
+            return (BaseProduct)this.MemberwiseClone();
+        }
+
+
+
+
     }
 }

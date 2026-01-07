@@ -1,9 +1,8 @@
-﻿using CraftShopAPI.Application.Factories;
-
-namespace CraftShopAPI.Application.DTO
+﻿namespace CraftShopAPI.Application.DTO
 {
-    public class CreateLampDTO : CreateBaseProductDto
+    public class ReadLampDTO
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Material { get; set; }
         public string Color { get; set; }

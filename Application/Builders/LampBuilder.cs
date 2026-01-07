@@ -1,4 +1,5 @@
-﻿namespace CraftShopAPI.Application.Builders
+﻿
+namespace CraftShopAPI.Application.Builders
 {
     public class LampBuilder
     {
@@ -12,39 +13,49 @@
 
         public LampBuilder() { }
         
-        public LampBuilder WithName(string name)
+        public LampBuilder SetName(string name)
         {
             _name = name;
             return this;
         }
-        public LampBuilder WithMaterial(string material)
+        public LampBuilder SetMaterial(string material)
         {
             _material = material;
             return this;
         }
-        public LampBuilder WithColor(string color)
+        public LampBuilder SetColor(string color)
         {
             _color = color;
             return this;
         }
-        public LampBuilder WithDimmer(bool hasDimmer)
+        public LampBuilder SetDimmer(bool hasDimmer)
         {
             _hasDimmer = hasDimmer;
             return this;
         }
-        public LampBuilder WithBulbType(string bulbType)
+        public LampBuilder SetBulbType(string bulbType)
         {
             _bulbType = bulbType;
             return this;
         }
-        public LampBuilder WithShadeShape(string shadeShape)
+        public LampBuilder SetShadeShape(string shadeShape)
         {
             _shadeShape = shadeShape;
             return this;
         }
         public Domain.Entities.Lamp Build()
         {
-            return new Domain.Entities.Lamp();
+            return new Domain.Entities.Lamp
+            {
+                Name = _name,
+                Material = _material,
+                Color = _color,
+                HasDimmer = _hasDimmer,
+                BulbType = _bulbType,
+                ShadeShape = _shadeShape
+            };
         }
+
+      
     }
 }

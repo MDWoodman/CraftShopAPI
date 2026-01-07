@@ -9,5 +9,20 @@
         public string BulbType { get; set; }
         public string ShadeShape { get; set; }
 
+        public override Lamp Clone() {
+           
+            return new Lamp
+            {
+                ProductId = this.ProductId,
+                Width = this.Width,
+                Height = this.Height,
+                Name = this.Name,
+                Material = this.Material,
+                Color = this.Color,
+                HasDimmer = this.HasDimmer,
+                BulbType = this.BulbType,
+                ShadeShape = this.ShadeShape
+            };
+        }
     }
 }

@@ -2,13 +2,13 @@
 
 namespace CraftShopAPI.Application.DTO
 {
-    public class CreateLampDTO : CreateBaseProductDto
+    public class CreateChairDTO : CreateBaseProductDto
     {
         public string Name { get; set; }
         public string Material { get; set; }
         public string Color { get; set; }
-        public bool HasDimmer { get; set; }
-        public string BulbType { get; set; }
-        public string ShadeShape { get; set; }
+        public bool HasCushion { get; set; }
+        public string Style { get; set; }
+        public int NumberOfLegs { get; set; }
     }
 }
